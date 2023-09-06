@@ -7,7 +7,13 @@ resource "aws_instance" "frontend" {
     Name = "frontend"
   }
 }
-
+resource "aws_route53_record" "frontend" {
+  zone_id = "Z023814724XBO8OK2PSWK"
+  name    = "frontend-dev.devops999.store"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.frontend.private_ip]
+}
 resource "aws_instance" "mongodb" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t3.micro"
