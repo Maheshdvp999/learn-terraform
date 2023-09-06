@@ -167,11 +167,11 @@ resource "aws_instance" "mysql" {
   instance_type = "t3.micro"
   vpc_security_group_ids=["sg-03a191c8c20494101"]
 
-
   tags = {
     Name = "mysql"
   }
-}resource "aws_route53_record" "mysql" {
+}
+resource "aws_route53_record" "mysql" {
   zone_id = "Z023814724XBO8OK2PSWK"
   name    = "mysql-dev.devops999.store"
   type    = "A"
