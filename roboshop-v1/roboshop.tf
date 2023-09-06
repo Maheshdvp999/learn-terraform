@@ -78,3 +78,12 @@ resource "aws_instance" "dispatch" {
     Name = "dispatch"
   }
 }
+
+resource "aws_instance" "mysql" {
+  ami           = "ami-03265a0778a880afb"
+  instance_type = "t3.micro"
+
+  tags = {
+    Name = "mysql"
+  }
+}
