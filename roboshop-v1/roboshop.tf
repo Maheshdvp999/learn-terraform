@@ -65,7 +65,7 @@ resource "aws_instance" "redis" {
 }
 resource "aws_route53_record" "redis" {
   zone_id = "Z023814724XBO8OK2PSWK"
-  name    = "frontend-dev.devops999.store"
+  name    = "redis-dev.devops999.store"
   type    = "A"
   ttl     = 30
   records = [aws_instance.redis.private_ip]
