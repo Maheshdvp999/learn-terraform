@@ -81,7 +81,7 @@ resource "aws_instance" "cart" {
     Name = "cart"
   }
 }
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "cart" {
   zone_id = "Z023814724XBO8OK2PSWK"
   name    = "cart-dev.devops999.store"
   type    = "A"
