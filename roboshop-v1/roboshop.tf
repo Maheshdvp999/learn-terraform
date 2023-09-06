@@ -154,7 +154,7 @@ resource "aws_instance" "dispatch" {
     Name = "dispatch"
   }
 }
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "dispatch" {
   zone_id = "Z023814724XBO8OK2PSWK"
   name    = "dispatch-dev.devops999.store"
   type    = "A"
