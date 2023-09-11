@@ -17,16 +17,16 @@ variable "zone_id" {
 
 variable "components" {
   default = {
-    frontend= {}
-    mongodb= {}
-    catalogue= {}
-    redis= {}
-    user= {}
-    shipping= {}
-    rabbitmq= {}
-    mysql= {}
-    payment= {}
-    dispatch= {}
+    frontend= {name="frontend-dev"}
+    mongodb= {name="mongodb-dev"}
+    catalogue= {name="catalogue-dev"}
+    redis= {name="redis-dev"}
+    user= {name="user-dev"}
+    shipping= {name="shipping-dev"}
+    rabbitmq= {name="rabbitmq-dev"}
+    mysql= {name="mysql-dev"}
+    payment= {name="payment-dev"}
+    dispatch= {name="dispatch-dev"}
   }
 }
 
