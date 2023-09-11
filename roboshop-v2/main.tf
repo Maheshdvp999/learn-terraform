@@ -3,9 +3,9 @@ variable "ami" {
   default = "ami-03265a0778a880afb"
 }
 
-variable "security_group" {
-  default = "sg-03a191c8c20494101"
-}
+#variable "security_group" {
+#  default = " sg-03a191c8c20494101"
+#}
 variable "instance_type" {
   default = "t3.small"
 }
@@ -30,12 +30,14 @@ variable "components" {
 }
 
 
-
+variable "security_groups" {
+  default = "sg-03a191c8c20494101"
+}
 resource "aws_instance" "instance" {
   for_each = var.components
   ami           = var.ami
   instance_type = var.instance_type
-  vpc_security_group_ids= var.security_group
+  vpc_security_group_ids= var.security_groups
 
   tags = {
     Name = lookup(each.value,"name", null )
