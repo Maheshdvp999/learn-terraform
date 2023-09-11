@@ -22,7 +22,7 @@ variable "components" {
     redis= {}
     user= {}
     shipping= {}
-    rabbiotmq= {}
+    rabbitmq= {}
     mysql= {}
     payment= {}
     dispatch= {}
@@ -41,13 +41,13 @@ resource "aws_instance" "instance" {
     Name = lookup(each.value,"name", null )
   }
 }
-#
 
 
 
-output "instances" {
-  value = aws_instance.instance
-}
+
+#output "instances" {
+#  value = aws_instance.instance
+#}
 #resource "aws_instance" "mongodb" {
 #  ami           = "ami-03265a0778a880afb"
 #  instance_type = "t3.micro"
