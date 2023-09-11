@@ -4,7 +4,7 @@ variable "ami" {
 }
 
 variable "security_groups" {
-  default = " sg-03a191c8c20494101"
+  default = [ " sg-03a191c8c20494101" ]
 }
 
 variable "instance_type" {
@@ -38,7 +38,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids= var.security_groups
 
   tags = {
-    Name = lookup(each.value,"name", null )
+    Name = lookup(var.components,each.value["name"], null )
   }
 }
 
