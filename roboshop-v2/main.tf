@@ -42,7 +42,9 @@ resource "aws_instance" "instance" {
   }
 }
 
-
+output "test" {
+  value = lookup(var.components,"frontend",null )
+}
 
 
 #output "instances" {
