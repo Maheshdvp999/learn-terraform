@@ -31,7 +31,7 @@ variable "components" {
 
 
 variable "security_group" {
-  default = "sg-03a191c8c20494101"
+  default = sg-03a191c8c20494101
 }
 resource "aws_instance" "instance" {
   for_each = var.components
