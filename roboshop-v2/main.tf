@@ -26,7 +26,6 @@ variable "components" {
     mysql= {}
     payment= {}
     dispatch= {}
-
   }
 }
 
